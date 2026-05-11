@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,8 +56,8 @@
         }
 
         .loader-circle {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             border: 7px solid #e5e7eb;
             border-top: 7px solid var(--primary);
             border-radius: 50%;
@@ -68,33 +67,6 @@
         @keyframes spin {
             100% {
                 transform: rotate(360deg);
-            }
-        }
-
-        .particles {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .particles span {
-            position: absolute;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--primary);
-            opacity: 0.18;
-            animation: move 14s linear infinite;
-        }
-
-        @keyframes move {
-            from {
-                transform: translateY(100vh);
-            }
-
-            to {
-                transform: translateY(-20vh);
             }
         }
 
@@ -115,14 +87,14 @@
         .navbar {
             width: 90%;
             margin: auto;
-            padding: 16px 0;
+            padding: 15px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 27px;
             font-weight: 800;
             color: var(--primary);
         }
@@ -190,7 +162,7 @@
 
         .hero {
             min-height: 100vh;
-            padding: 130px 8% 70px;
+            padding: 120px 8% 60px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -215,7 +187,7 @@
         }
 
         .hero-text h1 {
-            font-size: 64px;
+            font-size: 62px;
             line-height: 1.1;
             margin-bottom: 18px;
         }
@@ -230,7 +202,7 @@
             color: var(--muted);
             font-size: 18px;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .hero-buttons {
@@ -240,7 +212,7 @@
         }
 
         .btn {
-            padding: 14px 26px;
+            padding: 13px 24px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
@@ -261,7 +233,7 @@
         }
 
         .btn:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px) scale(1.03);
         }
 
         .hero-img {
@@ -271,15 +243,15 @@
         }
 
         .profile-circle {
-            width: 350px;
-            height: 350px;
+            width: 330px;
+            height: 330px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), #9333ea);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 90px;
+            font-size: 86px;
             font-weight: 900;
             box-shadow: 0 25px 60px rgba(37, 99, 235, 0.35);
             animation: float 4s ease-in-out infinite;
@@ -289,7 +261,7 @@
         .profile-circle::after {
             content: "";
             position: absolute;
-            inset: -18px;
+            inset: -16px;
             border-radius: 50%;
             border: 3px dashed rgba(37, 99, 235, 0.4);
             animation: rotate 14s linear infinite;
@@ -303,18 +275,18 @@
 
         @keyframes float {
             50% {
-                transform: translateY(-22px);
+                transform: translateY(-18px);
             }
         }
 
         section {
-            padding: 90px 8%;
+            padding: 65px 8%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 42px;
-            margin-bottom: 55px;
+            font-size: 38px;
+            margin-bottom: 38px;
         }
 
         .section-title span {
@@ -323,8 +295,8 @@
 
         .card {
             background: var(--card);
-            padding: 35px;
-            border-radius: 24px;
+            padding: 30px;
+            border-radius: 22px;
             box-shadow: 0 10px 30px var(--shadow);
             line-height: 1.8;
             color: var(--muted);
@@ -332,94 +304,89 @@
 
         .counter-grid,
         .skills-grid,
-        .cert-grid,
-        .testimonial-grid {
+        .cert-grid {
             display: grid;
-            gap: 25px;
+            gap: 22px;
         }
 
         .counter-grid {
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         }
 
         .skills-grid {
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+            gap: 18px;
         }
 
         .cert-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .testimonial-grid {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .counter-card,
-        .skill-card,
-        .cert-card,
-        .testimonial {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 22px;
-            box-shadow: 0 10px 30px var(--shadow);
-            transition: 0.3s;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
         }
 
         .counter-card,
         .skill-card,
         .cert-card {
+            background: var(--card);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: 0.3s;
             text-align: center;
+        }
+
+        .skill-card {
+            padding: 18px 12px;
+            border-radius: 18px;
         }
 
         .counter-card:hover,
         .cert-card:hover,
-        .testimonial:hover {
-            transform: translateY(-8px);
+        .skill-card:hover {
+            transform: translateY(-7px) scale(1.02);
         }
 
         .counter-card h2 {
-            font-size: 44px;
+            font-size: 40px;
             color: var(--primary);
         }
 
         .counter-card p,
         .skill-card p,
-        .cert-card p,
-        .testimonial p {
+        .cert-card p {
             color: var(--muted);
-            margin-top: 8px;
-            line-height: 1.7;
+            margin-top: 7px;
+            line-height: 1.6;
         }
 
-        .skill-card:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-10px);
+        .skill-card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
         }
 
-        .skill-card:hover p {
-            color: white;
+        .skill-card p {
+            font-size: 14px;
         }
 
-        .skill-card i,
+        .skill-card i {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
         .cert-card i {
-            font-size: 42px;
+            font-size: 38px;
             margin-bottom: 15px;
-        }
-
-        .cert-card i {
             color: var(--primary);
         }
 
         .filter-buttons {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .filter-buttons button {
             border: none;
-            padding: 11px 22px;
-            margin: 6px;
+            padding: 10px 20px;
+            margin: 5px;
             border-radius: 25px;
             background: var(--secondary);
             color: var(--text);
@@ -435,52 +402,78 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 28px;
         }
 
         .project-card {
             background: var(--card);
-            border-radius: 24px;
+            border-radius: 22px;
             overflow: hidden;
             box-shadow: 0 12px 35px var(--shadow);
             transition: 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-10px) scale(1.01);
         }
 
         .project-img {
-            height: 210px;
-            background: linear-gradient(135deg, var(--primary), #9333ea);
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            border-radius: 18px 18px 0 0;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 62px;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+            transition: 0.4s;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.03);
+        }
+
+        .single-project-view {
+            grid-template-columns: minmax(300px, 850px);
+            justify-content: center;
+        }
+
+        .single-project-view .project-img {
+            height: 430px;
+        }
+
+        .single-project-view .project-img img {
+            object-fit: contain;
         }
 
         .project-content {
-            padding: 28px;
+            padding: 25px;
         }
 
         .project-content h3 {
-            font-size: 24px;
+            font-size: 23px;
             margin-bottom: 12px;
         }
 
         .project-content p {
             color: var(--muted);
             line-height: 1.7;
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
 
         .tech-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin: 16px 0 20px;
+            margin: 15px 0 18px;
         }
 
         .tech-badges span {
@@ -501,7 +494,7 @@
         .project-links a {
             background: var(--primary);
             color: white;
-            padding: 10px 15px;
+            padding: 10px 14px;
             border-radius: 9px;
             text-decoration: none;
             font-size: 14px;
@@ -515,9 +508,9 @@
 
         .timeline-item {
             background: var(--card);
-            padding: 25px;
+            padding: 23px;
             border-left: 5px solid var(--primary);
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             border-radius: 18px;
             box-shadow: 0 8px 25px var(--shadow);
             transition: 0.3s;
@@ -530,27 +523,14 @@
         .timeline-item p {
             color: var(--muted);
             margin-top: 8px;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary), #9333ea);
-            color: white;
-            padding: 45px;
-            border-radius: 28px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.28);
-        }
-
-        .cta-box p {
-            margin: 16px 0 25px;
             line-height: 1.7;
         }
 
         .contact-box {
-            max-width: 850px;
+            max-width: 900px;
             margin: auto;
             background: var(--card);
-            padding: 40px;
+            padding: 36px;
             border-radius: 24px;
             box-shadow: 0 10px 30px var(--shadow);
             text-align: center;
@@ -608,12 +588,66 @@
             background: #111827;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 22px;
         }
+        .footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-left h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.footer-left p,
+.footer-right p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    transform: translateY(-5px) scale(1.08);
+}
+
+@media(max-width:768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+        
+        
 
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(35px);
             transition: 0.8s;
         }
 
@@ -626,7 +660,7 @@
             .hero {
                 flex-direction: column-reverse;
                 text-align: center;
-                padding-top: 120px;
+                padding-top: 115px;
             }
 
             .hero-buttons {
@@ -649,12 +683,12 @@
 
             .nav-links {
                 position: absolute;
-                top: 72px;
+                top: 70px;
                 right: -100%;
                 width: 100%;
                 background: var(--card);
                 flex-direction: column;
-                padding: 25px;
+                padding: 24px;
                 transition: 0.4s;
                 box-shadow: 0 10px 25px var(--shadow);
             }
@@ -664,7 +698,7 @@
             }
 
             .hero {
-                padding: 115px 5% 60px;
+                padding: 110px 5% 50px;
             }
 
             .hero-text h1 {
@@ -672,17 +706,18 @@
             }
 
             .profile-circle {
-                width: 240px;
-                height: 240px;
-                font-size: 60px;
+                width: 230px;
+                height: 230px;
+                font-size: 58px;
             }
 
             section {
-                padding: 70px 5%;
+                padding: 48px 5%;
             }
 
             .section-title {
-                font-size: 32px;
+                font-size: 31px;
+                margin-bottom: 30px;
             }
 
             .btn {
@@ -692,6 +727,35 @@
 
             .contact-actions {
                 flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .skill-card {
+                padding: 16px 8px;
+            }
+
+            .skill-card i {
+                font-size: 28px;
+            }
+
+            .skill-card h3 {
+                font-size: 16px;
+            }
+
+            .skill-card p {
+                font-size: 13px;
+            }
+
+            .single-project-view {
+                grid-template-columns: 1fr;
+            }
+
+            .single-project-view .project-img {
+                height: 270px;
             }
         }
 
@@ -709,13 +773,21 @@
             }
 
             .profile-circle {
-                width: 200px;
-                height: 200px;
-                font-size: 50px;
+                width: 190px;
+                height: 190px;
+                font-size: 48px;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .project-img {
+                height: 220px;
+            }
+
+            .single-project-view .project-img {
+                height: 240px;
             }
 
             .project-links a {
@@ -723,9 +795,8 @@
                 text-align: center;
             }
 
-            .contact-box,
-            .cta-box {
-                padding: 25px;
+            .contact-box {
+                padding: 24px;
             }
 
             .modal {
@@ -741,17 +812,9 @@
         <div class="loader-circle"></div>
     </div>
 
-    <div class="particles">
-        <span style="left:8%; animation-delay:0s;"></span>
-        <span style="left:22%; animation-delay:2s;"></span>
-        <span style="left:38%; animation-delay:4s;"></span>
-        <span style="left:55%; animation-delay:1s;"></span>
-        <span style="left:72%; animation-delay:3s;"></span>
-        <span style="left:90%; animation-delay:5s;"></span>
-    </div>
-
     <div class="floating-social">
         <a href="mailto:balanjineyulu03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+919948526078"><i class="fa-solid fa-phone"></i></a>
         <a href="https://github.com/PBalanjineyulu" target="_blank"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/balanjineyulu-pemmasani-041718291" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
@@ -760,7 +823,6 @@
 
     <header>
         <div class="navbar">
-
             <div class="logo">Balanjineyulu</div>
 
             <div class="nav-links" id="navLinks">
@@ -780,21 +842,14 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
-
         </div>
     </header>
 
     <section class="hero" id="home">
-
         <div class="hero-text">
+            <div class="badge">Full Stack Python Developer</div>
 
-            <div class="badge">
-                Available for Fresher Developer Roles
-            </div>
-
-            <h1>
-                Hi, I'm <span id="typing"></span>
-            </h1>
+            <h1>Hi, I'm <span id="typing"></span></h1>
 
             <p>
                 Full Stack Developer skilled in Python, Flask, MySQL, SQLite,
@@ -807,23 +862,24 @@
                 <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
                 <a href="#" onclick="openResume()" class="btn btn-outline">Preview Resume</a>
             </div>
-
         </div>
 
         <div class="hero-img">
             <div class="profile-circle">PB</div>
         </div>
-
     </section>
 
     <section>
         <h2 class="section-title">About <span>Me</span></h2>
 
         <div class="card">
-            I am Balanjineyulu Pemmasani, a highly motivated Computer Science graduate
-            and Full Stack Python trainee. I have hands-on experience in building web
-            applications using Python, Flask, HTML, CSS, JavaScript and MySQL. I am looking
-            for an opportunity to contribute to real-world software development projects.
+            I am Balanjineyulu Pemmasani, a Full Stack Python Developer with hands-on
+            experience in building responsive web applications using Python, Flask,
+            MySQL, SQLite, HTML, CSS, Bootstrap and JavaScript. I have completed
+            Python Full Stack training and developed live projects like SmartCart
+            E-commerce Application and Notes Management System. I focus on writing
+            clean code, creating user-friendly interfaces and improving my skills
+            through real-time project development.
         </div>
     </section>
 
@@ -832,22 +888,17 @@
 
         <div class="counter-grid">
             <div class="counter-card">
-                <h2 class="counter" data-target="2">0</h2>
+                <h2>2+</h2>
                 <p>Live Projects</p>
             </div>
 
             <div class="counter-card">
-                <h2 class="counter" data-target="8">0</h2>
+                <h2>8+</h2>
                 <p>Technologies</p>
             </div>
 
             <div class="counter-card">
-                <h2 class="counter" data-target="3">0</h2>
-                <p>SmartCart Modules</p>
-            </div>
-
-            <div class="counter-card">
-                <h2 class="counter" data-target="100">0</h2>
+                <h2>100%</h2>
                 <p>Responsive Design</p>
             </div>
         </div>
@@ -857,55 +908,53 @@
         <h2 class="section-title">Technical <span>Skills</span></h2>
 
         <div class="skills-grid">
-
             <div class="skill-card">
                 <i class="fa-brands fa-python"></i>
                 <h3>Python</h3>
-                <p>Backend Development</p>
+                <p>Backend</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-solid fa-flask"></i>
                 <h3>Flask</h3>
-                <p>Web Applications</p>
+                <p>Web Apps</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-solid fa-database"></i>
                 <h3>MySQL</h3>
-                <p>Database Management</p>
+                <p>Database</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-solid fa-server"></i>
                 <h3>SQLite</h3>
-                <p>Deployment Database</p>
+                <p>Deployment DB</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-brands fa-html5"></i>
                 <h3>HTML</h3>
-                <p>Web Structure</p>
+                <p>Structure</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-brands fa-css3-alt"></i>
                 <h3>CSS</h3>
-                <p>Modern Styling</p>
+                <p>Styling</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-brands fa-js"></i>
                 <h3>JavaScript</h3>
-                <p>Interactive UI</p>
+                <p>UI Logic</p>
             </div>
 
             <div class="skill-card">
                 <i class="fa-brands fa-bootstrap"></i>
                 <h3>Bootstrap</h3>
-                <p>Responsive Design</p>
+                <p>Responsive</p>
             </div>
-
         </div>
     </section>
 
@@ -916,15 +965,12 @@
             <button class="active" onclick="filterProjects('all', this)">All</button>
             <button onclick="filterProjects('ecommerce', this)">E-commerce</button>
             <button onclick="filterProjects('notes', this)">Notes</button>
-            <button onclick="filterProjects('flask', this)">Flask</button>
         </div>
 
         <div class="projects-grid">
-
             <div class="project-card project-item ecommerce flask">
-
                 <div class="project-img">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <img src="images/smartcart-project.png" alt="SmartCart Project">
                 </div>
 
                 <div class="project-content">
@@ -949,13 +995,11 @@
                         <a href="https://github.com/PBalanjineyulu" target="_blank">GitHub</a>
                     </div>
                 </div>
-
             </div>
 
             <div class="project-card project-item notes flask">
-
                 <div class="project-img">
-                    <i class="fa-solid fa-note-sticky"></i>
+                    <img src="images/notes-project.png" alt="Notes Management Project">
                 </div>
 
                 <div class="project-content">
@@ -978,32 +1022,35 @@
                         <a href="https://github.com/PBalanjineyulu" target="_blank">GitHub</a>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
     <section>
-        <h2 class="section-title">Experience <span>Timeline</span></h2>
+        <h2 class="section-title">Training & <span>Experience</span></h2>
 
         <div class="timeline">
-
             <div class="timeline-item">
-                <h3>Full Stack Python Trainee - Codegnan IT Solutions</h3>
-                <p>Learning Python, Flask, HTML, CSS, JavaScript, MySQL, REST APIs and real-time project development.</p>
+                <h3>Python Full Stack Training - Codegnan IT Solutions</h3>
+                <p>
+                    Completed hands-on training in Python, Flask, HTML, CSS,
+                    JavaScript, Bootstrap, MySQL and real-time web application development.
+                </p>
             </div>
 
             <div class="timeline-item">
                 <h3>SmartCart E-commerce Project</h3>
-                <p>Built and deployed a full-stack e-commerce application with multiple modules using Flask.</p>
+                <p>
+                    Built and deployed a full-stack e-commerce application with multiple modules using Flask.
+                </p>
             </div>
 
             <div class="timeline-item">
                 <h3>Notes Management System</h3>
-                <p>Developed a CRUD-based notes application with authentication and responsive UI.</p>
+                <p>
+                    Developed a CRUD-based notes application with authentication and responsive UI.
+                </p>
             </div>
-
         </div>
     </section>
 
@@ -1011,7 +1058,6 @@
         <h2 class="section-title">Certifications</h2>
 
         <div class="cert-grid">
-
             <div class="cert-card">
                 <i class="fa-solid fa-award"></i>
                 <h3>Python Certification</h3>
@@ -1029,50 +1075,6 @@
                 <h3>HTML & CSS Certification</h3>
                 <p>HackerRank</p>
             </div>
-
-            <div class="cert-card">
-                <i class="fa-solid fa-award"></i>
-                <h3>Java Full Stack Certification</h3>
-                <p>HMI Engineering Services</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="cta-box">
-            <h2>Looking for a Fresher Full Stack Developer?</h2>
-            <p>
-                I am ready to contribute, learn quickly, and build real-world web applications
-                using Python, Flask, MySQL, HTML, CSS and JavaScript.
-            </p>
-            <a href="mailto:balanjineyulu03@gmail.com" class="btn btn-primary">Hire Me / Contact Me</a>
-        </div>
-    </section>
-
-    <section>
-        <h2 class="section-title">Recruiter <span>View</span></h2>
-
-        <div class="testimonial-grid">
-
-            <div class="testimonial">
-                <p>“Good practical exposure to Flask, MySQL and responsive web application development.”</p>
-                <br>
-                <h4>Project Strength</h4>
-            </div>
-
-            <div class="testimonial">
-                <p>“Built live deployed projects with user, admin and database functionality.”</p>
-                <br>
-                <h4>Deployment Ready</h4>
-            </div>
-
-            <div class="testimonial">
-                <p>“Strong fresher profile with hands-on full stack project experience.”</p>
-                <br>
-                <h4>Fresher Developer</h4>
-            </div>
-
         </div>
     </section>
 
@@ -1080,18 +1082,20 @@
         <h2 class="section-title">Contact <span>Me</span></h2>
 
         <div class="contact-box">
-
             <h3>Let’s Connect</h3>
 
             <p>
-                I am open to fresher software developer, Python developer,
-                Flask developer and full stack web developer opportunities.
+                Feel free to contact me for Full Stack Python Developer
+                opportunities, freelance projects or collaboration.
             </p>
 
             <div class="contact-actions">
-
                 <a href="mailto:balanjineyulu03@gmail.com" class="btn btn-primary">
                     <i class="fa-solid fa-envelope"></i> Email Me
+                </a>
+
+                <a href="tel:+919948526078" class="btn btn-primary">
+                    <i class="fa-solid fa-phone"></i> 9948526078
                 </a>
 
                 <a href="https://www.linkedin.com/in/balanjineyulu-pemmasani-041718291" target="_blank"
@@ -1102,15 +1106,36 @@
                 <a href="https://github.com/PBalanjineyulu" target="_blank" class="btn btn-outline">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
-
             </div>
-
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Balanjineyulu Pemmasani | Full Stack Developer Portfolio</p>
-    </footer>
+  <footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Balanjineyulu Pemmasani</h3>
+            <p>Full Stack Python Developer</p>
+        </div>
+
+        <div>
+
+            <p>Email: balanjineyulu03@gmail.com</p>
+            <p>Phone: 9948526078</p>
+
+            <div class="footer-links">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
 
     <div class="modal" id="resumeModal">
         <div class="modal-content">
@@ -1163,33 +1188,19 @@
 
         typeEffect();
 
-        const counters = document.querySelectorAll(".counter");
-
-        counters.forEach(counter => {
-            counter.innerText = "0";
-
-            const updateCounter = () => {
-                const target = +counter.getAttribute("data-target");
-                const current = +counter.innerText;
-                const increment = Math.ceil(target / 80);
-
-                if (current < target) {
-                    counter.innerText = current + increment;
-                    setTimeout(updateCounter, 25);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-
-            updateCounter();
-        });
-
         function filterProjects(category, button) {
             let projects = document.querySelectorAll(".project-item");
             let buttons = document.querySelectorAll(".filter-buttons button");
+            let grid = document.querySelector(".projects-grid");
 
             buttons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
+
+            if (category === "all") {
+                grid.classList.remove("single-project-view");
+            } else {
+                grid.classList.add("single-project-view");
+            }
 
             projects.forEach(project => {
                 if (category === "all" || project.classList.contains(category)) {
@@ -1236,5 +1247,4 @@
     </script>
 
 </body>
-
 </html>
