@@ -645,16 +645,11 @@
         
         
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: 0.8s;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .hero {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
 
        @media(max-width:992px) {
     .hero {
@@ -1261,23 +1256,23 @@ if (typing) {
             }
         };
 
-       document.querySelectorAll("section:not(.hero)").forEach(section => {
-    section.classList.add("reveal");
-});
+//        document.querySelectorAll("section:not(.hero)").forEach(section => {
+//     section.classList.add("reveal");
+// });
 
-        window.addEventListener("scroll", function () {
-            const reveals = document.querySelectorAll(".reveal");
+//         window.addEventListener("scroll", function () {
+//             const reveals = document.querySelectorAll(".reveal");
 
-            reveals.forEach(section => {
-                const windowHeight = window.innerHeight;
-                const revealTop = section.getBoundingClientRect().top;
-                const revealPoint = 120;
+//             reveals.forEach(section => {
+//                 const windowHeight = window.innerHeight;
+//                 const revealTop = section.getBoundingClientRect().top;
+//                 const revealPoint = 120;
 
-                if (revealTop < windowHeight - revealPoint) {
-                    section.classList.add("active");
-                }
-            });
-        });
+//                 if (revealTop < windowHeight - revealPoint) {
+//                     section.classList.add("active");
+//                 }
+//             });
+//         });
     </script>
 
 </body>
