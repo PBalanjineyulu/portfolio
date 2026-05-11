@@ -656,153 +656,169 @@
             transform: translateY(0);
         }
 
-        @media(max-width:992px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 115px;
-            }
+       @media(max-width:992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 115px;
+    }
 
-            .hero-buttons {
-                justify-content: center;
-            }
+    .hero-buttons {
+        justify-content: center;
+    }
 
-            .hero-text h1 {
-                font-size: 48px;
-            }
-        }
+    .hero-text h1 {
+        font-size: 48px;
+    }
+}
 
-        @media(max-width:768px) {
-            .floating-social {
-                display: none;
-            }
+@media(max-width:768px) {
+    .floating-social {
+        display: none;
+    }
 
-            .menu-btn {
-                display: inline-block;
-            }
+    .menu-btn {
+        display: inline-block;
+    }
 
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                right: -100%;
-                width: 100%;
-                background: var(--card);
-                flex-direction: column;
-                padding: 24px;
-                transition: 0.4s;
-                box-shadow: 0 10px 25px var(--shadow);
-            }
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        background: var(--card);
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        border-radius: 18px;
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 25px var(--shadow);
+        z-index: 1001;
+    }
 
-            .nav-links.active {
-                right: 0;
-            }
+    .nav-links.active {
+        max-height: 350px;
+        padding: 24px;
+        opacity: 1;
+    }
 
-            .hero {
-                padding: 110px 5% 50px;
-            }
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 
-            .hero-text h1 {
-                font-size: 38px;
-            }
+    .hero {
+        padding: 110px 5% 50px;
+    }
 
-            .profile-circle {
-                width: 230px;
-                height: 230px;
-                font-size: 58px;
-            }
+    .hero-text h1 {
+        font-size: 38px;
+    }
 
-            section {
-                padding: 48px 5%;
-            }
+    .profile-circle {
+        width: 230px;
+        height: 230px;
+        font-size: 58px;
+    }
 
-            .section-title {
-                font-size: 31px;
-                margin-bottom: 30px;
-            }
+    section {
+        padding: 48px 5%;
+    }
 
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
+    .section-title {
+        font-size: 31px;
+        margin-bottom: 30px;
+    }
 
-            .contact-actions {
-                flex-direction: column;
-            }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
-            }
+    .contact-actions {
+        flex-direction: column;
+    }
 
-            .skill-card {
-                padding: 16px 8px;
-            }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
 
-            .skill-card i {
-                font-size: 28px;
-            }
+    .skill-card {
+        padding: 16px 8px;
+    }
 
-            .skill-card h3 {
-                font-size: 16px;
-            }
+    .skill-card i {
+        font-size: 28px;
+    }
 
-            .skill-card p {
-                font-size: 13px;
-            }
+    .skill-card h3 {
+        font-size: 16px;
+    }
 
-            .single-project-view {
-                grid-template-columns: 1fr;
-            }
+    .skill-card p {
+        font-size: 13px;
+    }
 
-            .single-project-view .project-img {
-                height: 270px;
-            }
-        }
+    .single-project-view {
+        grid-template-columns: 1fr;
+    }
 
-        @media(max-width:480px) {
-            .logo {
-                font-size: 22px;
-            }
+    .single-project-view .project-img {
+        height: 270px;
+    }
+}
 
-            .hero-text h1 {
-                font-size: 30px;
-            }
+@media(max-width:480px) {
+    .logo {
+        font-size: 22px;
+    }
 
-            .hero-text p {
-                font-size: 16px;
-            }
+    .hero-text h1 {
+        font-size: 30px;
+    }
 
-            .profile-circle {
-                width: 190px;
-                height: 190px;
-                font-size: 48px;
-            }
+    .hero-text p {
+        font-size: 16px;
+    }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+    .profile-circle {
+        width: 190px;
+        height: 190px;
+        font-size: 48px;
+    }
 
-            .project-img {
-                height: 220px;
-            }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .single-project-view .project-img {
-                height: 240px;
-            }
+    .project-img {
+        height: 220px;
+    }
 
-            .project-links a {
-                width: 100%;
-                text-align: center;
-            }
+    .single-project-view .project-img {
+        height: 240px;
+    }
 
-            .contact-box {
-                padding: 24px;
-            }
+    .project-links a {
+        width: 100%;
+        text-align: center;
+    }
 
-            .modal {
-                padding: 15px;
-            }
-        }
+    .contact-box {
+        padding: 24px;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+}
     </style>
 </head>
 
@@ -846,29 +862,46 @@
     </header>
 
     <section class="hero" id="home">
-        <div class="hero-text">
-            <div class="badge">Full Stack Python Developer</div>
 
-            <h1>Hi, I'm <span id="typing"></span></h1>
+    <div class="hero-text">
 
-            <p>
-                Full Stack Developer skilled in Python, Flask, MySQL, SQLite,
-                HTML, CSS, Bootstrap and JavaScript. I build responsive,
-                user-friendly and industry-oriented web applications.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
-                <a href="#" onclick="openResume()" class="btn btn-outline">Preview Resume</a>
-            </div>
+        <div class="badge">
+            Full Stack Python Developer
         </div>
 
-        <div class="hero-img">
-            <div class="profile-circle">PB</div>
-        </div>
-    </section>
+        <h1>
+            Hi, I'm <span id="typing">Balanjineyulu</span>
+        </h1>
 
+        <p>
+            Passionate Full Stack Python Developer with hands-on experience
+            in building responsive and real-world web applications using
+            Python, Flask, MySQL, HTML, CSS, Bootstrap and JavaScript.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">
+                View Projects
+            </a>
+
+            <a href="resume.pdf" download class="btn btn-outline">
+                Download Resume
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-img">
+
+        <div class="profile-circle">
+            PB
+        </div>
+
+    </div>
+
+</section>
     <section>
         <h2 class="section-title">About <span>Me</span></h2>
 
