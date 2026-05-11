@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Balanjineyulu | Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: #111827;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar {
+            width: 90%;
+            margin: auto;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #111827;
+            font-weight: 600;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: #2563eb;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 8% 60px;
+            gap: 70px;
+            background: linear-gradient(135deg, #ffffff, #eff6ff);
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h3 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #2563eb;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.4s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #2563eb;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -14px;
+            border-radius: 10px;
+        }
+
+        /* ABOUT */
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .skill-card:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-10px);
+        }
+
+        .skill-card i {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .skill-card p {
+            margin-top: 10px;
+            color: #6b7280;
+        }
+
+        .skill-card:hover p {
+            color: white;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .project-content p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-links a {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .project-links a:hover {
+            background: #1d4ed8;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: white;
+            padding: 45px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-item {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .contact-item:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-8px);
+        }
+
+        .contact-item i {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: inherit;
+            word-break: break-word;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        /* ANIMATION */
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:992px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                right: -100%;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 0;
+                transition: 0.4s;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero {
+                padding: 120px 5% 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-image img {
+                width: 260px;
+                height: 260px;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media(max-width:480px) {
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                width: 210px;
+                height: 210px;
+            }
+
+            .project-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">Portfolio</div>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h3>Hello, I'm</h3>
+
+            <h1><span id="typing"></span></h1>
+
+            <p>
+                Passionate Full Stack Developer skilled in Python, Flask,
+                MySQL, SQLite, HTML, CSS, Bootstrap and JavaScript.
+                Built complete real-world applications with responsive UI/UX design.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="resume.pdf" download class="btn btn-outline">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://i.pravatar.cc/500" alt="profile">
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-card">
+
+            I am a passionate fresher developer looking for opportunities in software development.
+            I have hands-on experience in building full-stack web applications using Flask,
+            MySQL, SQLite, HTML, CSS, Bootstrap and JavaScript.
+            I enjoy building responsive and modern user interfaces with attractive UI/UX design.
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Responsive Web Structure</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Modern UI/UX Design</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Interactive Frontend</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <h3>Python</h3>
+                <p>Backend Development</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>MySQL</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h3>Bootstrap</h3>
+                <p>Responsive Framework</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+            <!-- SMARTCART -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>SmartCart E-commerce</h3>
+
+                    <p>
+                        Full Stack E-commerce application with user authentication,
+                        cart system, admin dashboard, invoice generation,
+                        order management and responsive UI design.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="https://balanjineyulusmartcart.pythonanywhere.com/user-login" target="_blank">
+                            User Module
+                        </a>
+
+                        <a href="https://balanjineyulusmartcart.pythonanywhere.com/admin-login" target="_blank">
+                            Admin Module
+                        </a>
+
+                        <a href="https://balanjineyulusmartcart.pythonanywhere.com/superadmin-login" target="_blank">
+                            Super Admin
+                        </a>
+
+                        <a href="https://github.com/PBalanjineyulu" target="_blank">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- NOTES -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Notes Management System</h3>
+
+                    <p>
+                        Secure Notes Management application with login,
+                        add notes, edit notes, delete notes,
+                        user authentication and responsive UI design.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="https://balanjineyulunotes.pythonanywhere.com/" target="_blank">
+                            Live Demo
+                        </a>
+
+                        <a href="https://github.com/PBalanjineyulu" target="_blank">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-box">
+
+            <div class="contact-grid">
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    <h3>LinkedIn</h3>
+
+                    <a href="https://www.linkedin.com/in/balanjineyulu-pemmasani-041718291" target="_blank"
+                        rel="noopener noreferrer">
+
+                        View Profile
+
+                    </a>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <h3>GitHub</h3>
+
+                    <a href="https://github.com/PBalanjineyulu" target="_blank">
+
+                        github.com/PBalanjineyulu
+
+                    </a>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Projects</h3>
+
+                    <p>Flask Full Stack Applications</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Balanjineyulu | Full Stack Developer Portfolio
+        </p>
+
+    </footer>
+
+    <!-- JS -->
+
+    <script>
+
+        /* MOBILE MENU */
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.onclick = () => {
+            navLinks.classList.toggle('active');
+        }
+
+        /* TYPING EFFECT */
+
+        const text = "Balanjineyulu";
+        const typing = document.getElementById("typing");
+
+        let i = 0;
+
+        function typeEffect() {
+
+            if (i < text.length) {
+
+                typing.innerHTML += text.charAt(i);
+
+                i++;
+
+                setTimeout(typeEffect, 150);
+            }
+        }
+
+        typeEffect();
+
+    </script>
+
+</body>
+
+</html>
