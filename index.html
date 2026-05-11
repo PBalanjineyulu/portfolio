@@ -869,9 +869,7 @@
             Full Stack Python Developer
         </div>
 
-        <h1>
-            Hi, I'm <span id="typing">Balanjineyulu</span>
-        </h1>
+        <h1>Hi, I'm <span id="typing"></span></h1>
 
         <p>
             Passionate Full Stack Python Developer with hands-on experience
@@ -1206,20 +1204,23 @@
                 themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
             }
         };
+const typingText = "Balanjineyulu";
+const typing = document.getElementById("typing");
 
-        const typingText = "Balanjineyulu";
-        const typing = document.getElementById("typing");
-        let typingIndex = 0;
+if (typing) {
+    typing.innerHTML = "";
+    let typingIndex = 0;
 
-        function typeEffect() {
-            if (typingIndex < typingText.length) {
-                typing.innerHTML += typingText.charAt(typingIndex);
-                typingIndex++;
-                setTimeout(typeEffect, 140);
-            }
+    function typeEffect() {
+        if (typingIndex < typingText.length) {
+            typing.innerHTML += typingText.charAt(typingIndex);
+            typingIndex++;
+            setTimeout(typeEffect, 140);
         }
+    }
 
-        typeEffect();
+    typeEffect();
+}
 
         function filterProjects(category, button) {
             let projects = document.querySelectorAll(".project-item");
@@ -1260,9 +1261,9 @@
             }
         };
 
-        document.querySelectorAll("section").forEach(section => {
-            section.classList.add("reveal");
-        });
+       document.querySelectorAll("section:not(.hero)").forEach(section => {
+    section.classList.add("reveal");
+});
 
         window.addEventListener("scroll", function () {
             const reveals = document.querySelectorAll(".reveal");
