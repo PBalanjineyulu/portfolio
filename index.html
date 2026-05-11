@@ -44,16 +44,7 @@
             color: var(--text);
             overflow-x: hidden;
         }
-#loader{
-    position:fixed;
-    inset:0;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-    transition:0.4s;
-}
+
 
         .loader-circle {
             width: 65px;
@@ -1171,15 +1162,7 @@
     </div>
 
     <script>
-       document.addEventListener("DOMContentLoaded", function () {
-
-    const loader = document.getElementById("loader");
-
-    if(loader){
-        loader.style.display = "none";
-    }
-
-});
+ 
         const menuBtn = document.getElementById("menuBtn");
         const navLinks = document.getElementById("navLinks");
 
