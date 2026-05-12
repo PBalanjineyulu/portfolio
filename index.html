@@ -45,20 +45,7 @@
             overflow-x: hidden;
         }
 
-        .loader-circle {
-            width: 65px;
-            height: 65px;
-            border: 7px solid #e5e7eb;
-            border-top: 7px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+      
 
         header {
             width: 100%;
@@ -239,7 +226,7 @@
     background: linear-gradient(135deg, var(--primary), var(--accent), #9333ea);
     padding: 8px;
     box-shadow: 0 30px 70px rgba(79, 70, 229, 0.35);
-    animation: float 4s ease-in-out infinite;
+    /* animation: float 4s ease-in-out infinite; */
     position: relative;
     overflow: hidden;
 }
@@ -258,12 +245,12 @@
                 transform: rotate(360deg);
             }
         }
-
+/* 
         @keyframes float {
             50% {
                 transform: translateY(-18px);
             }
-        }
+        } */
 
         section {
             padding: 65px 8%;
@@ -839,9 +826,7 @@
 
 <body>
 
-    <!-- <div id="loader">
-        <div class="loader-circle"></div>
-    </div> -->
+    
 
     <div class="floating-social">
         <a href="mailto:balanjineyulu03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -1295,23 +1280,6 @@ if (typing) {
             }
         };
 
-//        document.querySelectorAll("section:not(.hero)").forEach(section => {
-//     section.classList.add("reveal");
-// });
-
-//         window.addEventListener("scroll", function () {
-//             const reveals = document.querySelectorAll(".reveal");
-
-//             reveals.forEach(section => {
-//                 const windowHeight = window.innerHeight;
-//                 const revealTop = section.getBoundingClientRect().top;
-//                 const revealPoint = 120;
-
-//                 if (revealTop < windowHeight - revealPoint) {
-//                     section.classList.add("active");
-//                 }
-//             });
-//         });
     </script>
 
 </body>
